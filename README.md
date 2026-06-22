@@ -212,7 +212,7 @@ Sentinel-SOAR-Lab/
 
 ## Contact
 
-**Mustapha Olakunle Mogaji**
+**Olakunle Mogaji**
 - LinkedIn: [linkedin.com/in/mustapha-mogaji-9215aa108](https://linkedin.com/in/mustapha-mogaji-9215aa108)
 - Email: ommogaji@hotmail.com
 - GitHub: [github.com/qoonleyh](https://github.com/qoonleyh)
