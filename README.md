@@ -12,7 +12,7 @@ This lab was originally published on Medium: [Microsoft Sentinel Automation Lab:
 
 ## Objective
 
-Design and implement an automated incident response workflow in Microsoft Sentinel that simulates a real-world SOC scenario — where detections are generated, triaged into incidents, and automatically orchestrated using SOAR capabilities.
+Design and implement an automated incident response workflow in Microsoft Sentinel that simulates a real-world SOC scenario where detections are generated, triaged into incidents, and automatically orchestrated using SOAR capabilities.
 
 ---
 
@@ -57,7 +57,7 @@ A resource group (`Automation_ruleRG`) was created in the East US region under t
 
 ![Creating Resource Group](./screenshots/Creating_RG.png)
 
-Microsoft Sentinel requires an Azure Log Analytics Workspace as its data store — Sentinel is a SIEM and does not store logs itself; it operates on data held in the workspace. A Log Analytics Workspace named `Homelab-workspace` was created in the same resource group.
+Microsoft Sentinel requires an Azure Log Analytics Workspace as its data store. Sentinel is a SIEM and does not store logs itself; it operates on data held in the workspace. A Log Analytics Workspace named `Homelab-workspace` was created in the same resource group.
 
 ![Log Analytics Workspace](./screenshots/Log_Analytics_Workspace.png)
 
@@ -96,7 +96,7 @@ This rule served as the detection engine for the entire workflow.
 
 ### Step 3: Playbook Development
 
-The playbook is the automated response mechanism — it defines what happens when an incident is created. In this lab, the goal was to receive an email notification every time an incident is generated.
+The playbook is the automated response mechanism. It defines what happens when an incident is created. In this lab, the goal was to receive an email notification every time an incident is generated.
 
 The playbook was built using Azure Logic Apps, initiated from the **Automation → Playbooks** section in the Defender portal by selecting **Logic App playbook → Playbook with incident trigger**.
 
@@ -138,7 +138,7 @@ With the playbook ready, an **Automation Rule** was created to act as the decisi
 
 ![Playbook Added](./screenshots/Playbook_added.png)
 
-The automation rule is what connects the detection to the response — when Sentinel generates an incident from the analytics rule, the automation rule fires and calls the Logic App playbook.
+The automation rule is what connects the detection to the response. When Sentinel generates an incident from the analytics rule, the automation rule fires and calls the Logic App playbook.
 
 ---
 
@@ -146,7 +146,7 @@ The automation rule is what connects the detection to the response — when Sent
 
 The workflow was tested end-to-end. Because the analytics rule runs every 5 minutes and consistently returns results (due to the static `datatable` query), incidents were generated automatically and repeatedly.
 
-The Defender portal confirmed the pipeline was working — **33 incidents** named `test_SOCworkflow` were generated, all with Medium severity, categorised as Suspicious Activity.
+The Defender portal confirmed the pipeline was working. **33 incidents** named `test_SOCworkflow` were generated, all with Medium severity, categorised as Suspicious Activity.
 
 ![Simulate Incident Creation](./screenshots/Simulate_incident_creation.png)
 
